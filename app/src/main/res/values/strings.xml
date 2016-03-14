@@ -13,4 +13,7 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <string name="search_for_gamers">Search For Gamers</string>
+    <string name="view_profile">View Profile</string>
+    <string name="edit_profile">Edit Profile</string>
 </resources>
