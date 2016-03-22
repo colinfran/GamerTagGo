@@ -23,10 +23,6 @@
         android:visibility="gone"
         android:layout_gravity="center"/>
 
-    <ScrollView
-        android:id="@+id/login_form"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -113,7 +109,6 @@
             </LinearLayout>
 
         </FrameLayout>
-    </ScrollView>
 
 
 
