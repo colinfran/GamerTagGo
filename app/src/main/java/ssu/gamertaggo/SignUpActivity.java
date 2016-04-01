@@ -41,7 +41,7 @@ public class SignUpActivity extends Activity {
         passwordAgainView = (EditText) findViewById(R.id.passwordAgain);
 
         // Set up the submit button click handler
-        findViewById(R.id.action_button).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.sign_up_action_button).setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
 
                 // Validate the sign up data

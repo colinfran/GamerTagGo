@@ -53,7 +53,7 @@
         android:layout_height="wrap_content"
         android:hint="@string/prompt_password_again"
         android:imeActionId="@+id/login"
-        android:imeActionLabel="@string/action_sign_in_short"
+        android:imeActionLabel="@string/action_sign_up_short"
         android:imeOptions="actionUnspecified"
         android:inputType="textPassword"
         android:maxLines="1"
@@ -61,7 +61,7 @@
         android:password="true" />
 
     <Button
-        android:id="@+id/action_button"
+        android:id="@+id/sign_up_action_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
