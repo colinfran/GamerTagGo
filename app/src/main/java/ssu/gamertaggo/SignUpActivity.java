@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 import com.parse.*;
 
+
 /**
  * Created by colinfranceschini on 3/24/16.
  */
@@ -17,8 +18,8 @@ import com.parse.*;
 
 public class SignUpActivity extends Activity {
 
-//    private EditText firstnameView;
-//    private EditText lastnameView;
+    private EditText firstnameView;
+    private EditText lastnameView;
     private EditText emailView;
     private EditText usernameView;
     private EditText passwordView;
@@ -30,10 +31,10 @@ public class SignUpActivity extends Activity {
         setContentView(R.layout.activity_signup);
 
         // Set up the signup form.
-/*
+
         firstnameView = (EditText) findViewById(R.id.firstname);
         lastnameView = (EditText) findViewById(R.id.lastname);
-*/
+
         emailView = (EditText) findViewById(R.id.email);
         usernameView = (EditText) findViewById(R.id.username);
         passwordView = (EditText) findViewById(R.id.password);
@@ -47,7 +48,7 @@ public class SignUpActivity extends Activity {
                 boolean validationError = false;
                 StringBuilder validationErrorMessage =
                         new StringBuilder(getResources().getString(R.string.error_intro));
- /*
+
                 if (isEmpty(firstnameView)) {
                     validationError = true;
                     validationErrorMessage.append(getResources().getString(R.string.error_blank_firstname));
@@ -57,7 +58,7 @@ public class SignUpActivity extends Activity {
                     validationError = true;
                     validationErrorMessage.append(getResources().getString(R.string.error_blank_lastname));
                 }
- */
+
                 if (isEmpty(emailView)) {
                     validationError = true;
                     validationErrorMessage.append(getResources().getString(R.string.error_blank_email));
@@ -98,14 +99,14 @@ public class SignUpActivity extends Activity {
                 dlg.show();
 
                 // Set up a new Parse user
-                ParseUser user = new ParseUser();
+                ParseObject.registerSubclass(GamerProParseUser.class);
+                GamerProParseUser user = ParseObject.create(GamerProParseUser.class);
                 user.setUsername(usernameView.getText().toString());
                 user.setPassword(passwordView.getText().toString());
                 user.setEmail(emailView.getText().toString());
+                user.setfirstName(firstnameView.getText().toString());
+                user.setlastName(lastnameView.getText().toString());
 
-//                ParseObject userinfo = new ParseObject("User");
-//                userinfo.put("first_name", firstnameView.getText().toString());
-//                userinfo.put("last_name", lastnameView.getText().toString());
 
                 // Call the Parse signup method
                 user.signUpInBackground(new SignUpCallback() {

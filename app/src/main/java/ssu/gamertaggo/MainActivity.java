@@ -16,7 +16,6 @@ import com.parse.*;
 
 // THIS MAIN ACTIVITY FILE CONTAINS CODE THAT ...
 
-
 public class MainActivity extends Activity {
 
     Button logout;
