@@ -6,9 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-/**
- * Created by colinfranceschini on 3/24/16.
- */
 
 // THIS ACTIVITY FILE CONTAINS CODE THAT BRINGS THE USER TO A LOGIN/SIGN-UP PAGE
 

@@ -13,7 +13,8 @@
 
         <LinearLayout
             style="@style/LoginFormContainer"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:weightSum="1">
 
             <EditText
                 android:id="@+id/username"

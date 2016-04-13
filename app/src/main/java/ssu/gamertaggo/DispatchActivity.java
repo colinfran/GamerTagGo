@@ -5,9 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import com.parse.*;
 
-/**
- * Created by colinfranceschini on 3/24/16.
- */
 
 // THIS ACTIVITY FILE CONTAINS CODE THAT LOGS THE USER OUT
 

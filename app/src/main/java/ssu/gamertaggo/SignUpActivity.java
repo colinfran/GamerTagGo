@@ -10,9 +10,6 @@ import android.widget.Toast;
 import com.parse.*;
 
 
-/**
- * Created by colinfranceschini on 3/24/16.
- */
 
 // THIS SIGN UP ACTIVITY FILE CONTAINS CODE THAT REGISTERS THE USER TO THE PARSE DATABASE
 
