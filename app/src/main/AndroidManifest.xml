@@ -33,9 +33,12 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".LoginActivity"/>
-        <activity android:name=".SignUpActivity"/>
-        <activity android:name=".SignUpOrLoginActivity"/>
+        <activity android:name=".LoginActivity"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".SignUpActivity"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".SignUpOrLoginActivity"
+            android:theme="@style/AppTheme"/>
     </application>
 
 </manifest>

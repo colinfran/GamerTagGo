@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 
 // THIS ACTIVITY FILE CONTAINS CODE THAT BRINGS THE USER TO A LOGIN/SIGN-UP PAGE
@@ -15,6 +16,8 @@ public class SignUpOrLoginActivity extends Activity {
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signup_or_login);
+
+        ImageView image;
 
         // Log in button click handler
         ((Button) findViewById(R.id.login)).setOnClickListener(new View.OnClickListener() {

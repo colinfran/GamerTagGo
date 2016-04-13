@@ -3,9 +3,8 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_main_menu"
-            android:title="Main Menu"
-            />
+            android:id="@+id/nav_mainmenu"
+            android:title="Main Menu" />
         <item
             android:id="@+id/nav_view_profile"
             android:title="View Profile" />
@@ -13,9 +12,8 @@
             android:id="@+id/nav_edit_profile"
             android:title="Edit Profile" />
         <item
-            android:id="@+id/nav_fellow_gamers"
-            android:title="Fellow Gamers" />
-
+            android:id="@+id/nav_homies"
+            android:title="Homies" />
     </group>
 
     <item android:title="Options">
@@ -25,7 +23,7 @@
                 android:icon="@drawable/ic_menu_settings"
                 android:title="Settings" />
             <item
-                android:id="@+id/nav_Logout"
+                android:id="@+id/nav_logout"
                 android:icon="@drawable/logout"
                 android:title="Logout" />
         </menu>
