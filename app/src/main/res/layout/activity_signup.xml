@@ -71,17 +71,18 @@
         android:paddingLeft="32dp"
         android:paddingRight="32dp"
         android:text="@string/sign_up" />
-<!--
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/controller2"
-        android:src="@drawable/controller2"
-        android:adjustViewBounds="false"
-        android:baselineAlignBottom="false"
-        android:layout_gravity="center"
-        android:clickable="false"
-        android:contentDescription="Logo" />
-        -->
+
+    <!--
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/controller2"
+            android:src="@drawable/controller2"
+            android:adjustViewBounds="false"
+            android:baselineAlignBottom="false"
+            android:layout_gravity="center"
+            android:clickable="false"
+            android:contentDescription="Logo" />
+            -->
 
 </LinearLayout>

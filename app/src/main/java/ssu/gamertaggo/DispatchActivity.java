@@ -6,10 +6,13 @@ import android.os.Bundle;
 import com.parse.*;
 
 
-// THIS ACTIVITY FILE CONTAINS CODE THAT LOGS THE USER OUT
-
+/**
+ * Activity which starts an intent for either the logged in (MainActivity) or logged out
+ * (SignUpOrLoginActivity) activity.
+ */
 
 public class DispatchActivity extends Activity {
+    Intent intent;
 
     @Override
     public void onCreate(Bundle savedInstanceState){
@@ -17,11 +20,13 @@ public class DispatchActivity extends Activity {
         // Check if there is current user info
         if (ParseUser.getCurrentUser() != null) {
             // Start an intent for the logged in activity
-            startActivity(new Intent(this, MainActivity.class));
+            intent = (new Intent(this, MainActivity.class));
         } else {
             // Start and intent for the logged out activity
-            startActivity(new Intent(this, SignUpOrLoginActivity.class));
+            intent = (new Intent(this, SignUpOrLoginActivity.class));
         }
+        startActivity(intent);
+        this.finish();
     }
 }
 
