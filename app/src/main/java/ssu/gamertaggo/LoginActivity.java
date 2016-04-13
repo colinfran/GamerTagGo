@@ -16,10 +16,6 @@ import android.widget.TextView;
 
 
 
-/**
- * Created by colinfranceschini on 3/24/16.
- */
-
 // THIS LOGIN ACTIVITY FILE CONTAINS CODE THAT LOGS THE USER IN
 
 

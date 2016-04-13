@@ -18,6 +18,9 @@
     <string name="error_blank_email">enter your email address</string>
     <string name="error_blank_firstname">enter your first name</string>
     <string name="error_blank_lastname">enter your last name</string>
+    <string name="error_blank_game">enter your favorite game</string>
+    <string name="error_blank_genre">enter your favorite genre</string>
+    <string name="error_blank_console">enter your console</string>
 
     <string name="error_blank_username">enter a username</string>
     <string name="error_blank_password">enter a password</string>
