@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 
 // THIS ACTIVITY FILE CONTAINS CODE THAT BRINGS THE USER TO A LOGIN/SIGN-UP PAGE
@@ -18,6 +19,7 @@ public class SignUpOrLoginActivity extends Activity {
         setContentView(R.layout.signup_or_login);
 
         ImageView image;
+        TextView textView;
 
         // Log in button click handler
         ((Button) findViewById(R.id.login)).setOnClickListener(new View.OnClickListener() {
@@ -34,5 +36,13 @@ public class SignUpOrLoginActivity extends Activity {
                 startActivity(new Intent(SignUpOrLoginActivity.this, SignUpActivity.class));
             }
         });
+
+        ((TextView) findViewById(R.id.textView2)).setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Starts an intent for the sign up activity
+                startActivity(new Intent(SignUpOrLoginActivity.this, AboutCreatorsActivity.class));
+            }
+        });
+
     }
 }
