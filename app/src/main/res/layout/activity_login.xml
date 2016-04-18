@@ -1,20 +1,16 @@
-<merge xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".LoginActivity"
-    android:background="@color/background">
-
-    <!-- Login form -->
-
-    <ScrollView
-        android:id="@+id/login_form"
-        android:layout_width="match_parent"
-        android:background="@color/background"
-        android:layout_height="fill_parent" >
+    android:background="@color/background"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent">
 
         <LinearLayout
-            style="@style/LoginFormContainer"
             android:orientation="vertical"
-            android:weightSum="1">
+            android:layout_height="fill_parent"
+            android:layout_width="fill_parent"
+            android:baselineAligned="false"
+            android:layout_marginTop="30dp">
 
             <EditText
                 android:id="@+id/username"
@@ -23,7 +19,11 @@
                 android:hint="@string/prompt_username"
                 android:inputType="textEmailAddress"
                 android:maxLines="1"
-                android:singleLine="true" />
+                android:singleLine="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textColorHint="#ffffff"
+                android:textColor="#ffffff" />
 
             <EditText
                 android:id="@+id/password"
@@ -35,7 +35,11 @@
                 android:singleLine="true"
                 android:imeActionId="@+id/edittext_action_login"
                 android:imeActionLabel="@string/log_in"
-                android:imeOptions="actionUnspecified" />
+                android:imeOptions="actionUnspecified"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textColorHint="#ffffff"
+                android:textColor="#ffffff" />
 
             <Button
                 android:id="@+id/action_button"
@@ -45,8 +49,7 @@
                 android:layout_marginTop="16dp"
                 android:paddingLeft="32dp"
                 android:paddingRight="32dp"
+                android:layout_marginRight="10dp"
                 android:text="@string/log_in" />
         </LinearLayout>
-    </ScrollView>
-
-</merge>
+</ScrollView>

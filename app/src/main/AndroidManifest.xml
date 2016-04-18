@@ -39,6 +39,7 @@
             android:theme="@style/AppTheme"/>
         <activity android:name=".SignUpOrLoginActivity"
             android:theme="@style/AppTheme"/>
+        <activity android:name=".AboutCreatorsActivity"/>
     </application>
 
 </manifest>
