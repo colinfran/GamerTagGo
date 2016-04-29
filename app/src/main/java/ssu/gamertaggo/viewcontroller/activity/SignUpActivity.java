@@ -1,4 +1,4 @@
-package ssu.gamertaggo;
+package ssu.gamertaggo.viewcontroller.activity;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -9,6 +9,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 import com.parse.*;
 
+import ssu.gamertaggo.utility.Dispatcher;
+import ssu.gamertaggo.service.AppParseUser;
+import ssu.gamertaggo.R;
 
 
 // THIS SIGN UP ACTIVITY FILE CONTAINS CODE THAT REGISTERS THE USER TO THE PARSE DATABASE
@@ -96,8 +99,8 @@ public class SignUpActivity extends Activity {
                 dlg.show();
 
                 // Set up a new Parse user
-                ParseObject.registerSubclass(GamerProParseUser.class);
-                GamerProParseUser user = ParseObject.create(GamerProParseUser.class);
+                ParseObject.registerSubclass(AppParseUser.class);
+                AppParseUser user = ParseObject.create(AppParseUser.class);
                 user.setUsername(usernameView.getText().toString());
                 user.setPassword(passwordView.getText().toString());
                 user.setEmail(emailView.getText().toString());
@@ -116,7 +119,7 @@ public class SignUpActivity extends Activity {
                             Toast.makeText(SignUpActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
                         } else {
                             // Start an intent for the dispatch activity
-                            Intent intent = new Intent(SignUpActivity.this, DispatchActivity.class);
+                            Intent intent = new Intent(SignUpActivity.this, Dispatcher.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                             startActivity(intent);
                         }
