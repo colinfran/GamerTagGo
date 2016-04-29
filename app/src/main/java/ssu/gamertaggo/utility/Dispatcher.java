@@ -1,9 +1,12 @@
-package ssu.gamertaggo;
+package ssu.gamertaggo.utility;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import com.parse.*;
+
+import ssu.gamertaggo.viewcontroller.activity.*;
+
 
 
 /**
@@ -11,7 +14,7 @@ import com.parse.*;
  * (SignUpOrLoginActivity) activity.
  */
 
-public class DispatchActivity extends Activity {
+public class Dispatcher extends Activity {
     Intent intent;
 
     @Override

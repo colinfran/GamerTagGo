@@ -1,4 +1,4 @@
-package ssu.gamertaggo;
+package ssu.gamertaggo.utility;
 
 import android.app.Application;
 import com.parse.*;
@@ -8,15 +8,15 @@ import com.parse.*;
     CLIENT KEY
  */
 
-public class InitializeActivity extends Application {
+public class AppDefines extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
         Parse.enableLocalDatastore(this);
         Parse.initialize(new Parse.Configuration.Builder(this)
-                .applicationId("wrYHgB3u7Lp0iTyhKFz3y9duaYISRhx64HeP7keb")
-                .clientKey("JLcpeLrkbW01nXUfmC8Hx6ESqNVmpryKHDKlipym")
-                .server("https://parseapi.back4app.com").build());
+                .applicationId(getString(ssu.gamertaggo.R.string.appID))
+                .clientKey(getString(ssu.gamertaggo.R.string.clientID))
+                .server(getString(ssu.gamertaggo.R.string.serverID)).build());
 
     }
 }

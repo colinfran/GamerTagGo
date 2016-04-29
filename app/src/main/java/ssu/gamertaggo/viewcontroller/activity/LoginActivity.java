@@ -1,4 +1,4 @@
-package ssu.gamertaggo;
+package ssu.gamertaggo.viewcontroller.activity;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -7,13 +7,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 import com.parse.*;
-import android.view.KeyEvent;
 
-import android.view.inputmethod.EditorInfo;
-import android.widget.Button;
-
-import android.widget.TextView;
-
+import ssu.gamertaggo.utility.Dispatcher;
+import ssu.gamertaggo.R;
 
 
 // THIS LOGIN ACTIVITY FILE CONTAINS CODE THAT LOGS THE USER IN
@@ -77,7 +73,7 @@ public class LoginActivity extends Activity {
                             Toast.makeText(LoginActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
                         } else {
                             // Start an intent for the dispatch activity
-                            Intent intent = new Intent(LoginActivity.this, DispatchActivity.class);
+                            Intent intent = new Intent(LoginActivity.this, Dispatcher.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                             startActivity(intent);
                         }

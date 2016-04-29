@@ -1,4 +1,4 @@
-package ssu.gamertaggo;
+package ssu.gamertaggo.viewcontroller.activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import ssu.gamertaggo.R;
 
 
 // THIS ACTIVITY FILE CONTAINS CODE THAT BRINGS THE USER TO A LOGIN/SIGN-UP PAGE

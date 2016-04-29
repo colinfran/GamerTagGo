@@ -12,8 +12,8 @@
             android:id="@+id/nav_edit_profile"
             android:title="Edit Profile" />
         <item
-            android:id="@+id/nav_homies"
-            android:title="Homies" />
+            android:id="@+id/nav_message"
+            android:title="Messages" />
     </group>
 
     <item android:title="Options">

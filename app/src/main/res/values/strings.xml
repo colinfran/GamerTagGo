@@ -6,18 +6,18 @@
     <string name="prompt_first_name">First Name</string>
     <string name="prompt_last_name">Last Name</string>
     <string name="prompt_password">Password</string>
-
+    <string name="emailHint">Email</string>
     <string name="prompt_username">Username</string>
     <string name="desired_username">Desired Username</string>
     <string name="desired_password">Desired Password</string>
     <string name="prompt_password_again">Password Again</string>
     <string name="action_sign_up_short">Sign up</string>
-
+    <string name="submit">Submit</string>
     <string name="error_intro">"Please "</string>
     <string name="error_blank_email">enter your email address</string>
     <string name="error_blank_firstname">enter your first name</string>
     <string name="error_blank_lastname">enter your last name</string>
-
+    <string name="resetpassword">Reset Password</string>
 
     <string name="error_blank_username">enter a username</string>
     <string name="error_blank_password">enter a password</string>
@@ -28,12 +28,23 @@
     <string name="log_in">Log in</string>
     <string name="sign_up">Sign up</string>
 
+    <string name="save">Save</string>
+
+    <string name = "appID">wrYHgB3u7Lp0iTyhKFz3y9duaYISRhx64HeP7keb</string>
+    <string name = "clientID">JLcpeLrkbW01nXUfmC8Hx6ESqNVmpryKHDKlipym</string>
+    <string name = "serverID">https://parseapi.back4app.com</string>
+
+
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="fav_game">Favorite Game</string>
     <string name="fav_genre">Favorite Genre</string>
     <string name="console_">Console</string>
+
+    <string name="HoldUser">To Message a user, press and hold there name</string>
+    <string name="message">Message User</string>
+
 
     <string name="MainMenu">Main Menu</string>
     <string name="ViewProfile">View Profile</string>
