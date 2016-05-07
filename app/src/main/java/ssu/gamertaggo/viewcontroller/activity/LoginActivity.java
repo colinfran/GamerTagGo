@@ -6,10 +6,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
-import com.parse.*;
 
-import ssu.gamertaggo.utility.Dispatcher;
+import com.parse.LogInCallback;
+import com.parse.ParseException;
+import com.parse.ParseUser;
+
 import ssu.gamertaggo.R;
+import ssu.gamertaggo.utility.Dispatcher;
 
 
 // THIS LOGIN ACTIVITY FILE CONTAINS CODE THAT LOGS THE USER IN
@@ -34,8 +37,7 @@ public class LoginActivity extends Activity {
             public void onClick(View view) {
                 // Validate the log in data
                 boolean validationError = false;
-                StringBuilder validationErrorMessage =
-                        new StringBuilder(getResources().getString(R.string.error_intro));
+                StringBuilder validationErrorMessage = new StringBuilder(getResources().getString(R.string.error_intro));
                 if (isEmpty(usernameView)) {
                     validationError = true;
                     validationErrorMessage.append(getResources().getString(R.string.error_blank_username));
@@ -74,8 +76,10 @@ public class LoginActivity extends Activity {
                         } else {
                             // Start an intent for the dispatch activity
                             Intent intent = new Intent(LoginActivity.this, Dispatcher.class);
+
                             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                             startActivity(intent);
+
                         }
                     }
                 });
@@ -84,10 +88,6 @@ public class LoginActivity extends Activity {
     }
 
     private boolean isEmpty(EditText etText) {
-        if (etText.getText().toString().trim().length() > 0) {
-            return false;
-        } else {
-            return true;
-        }
+        return etText.getText().toString().trim().length() <= 0;
     }
 }

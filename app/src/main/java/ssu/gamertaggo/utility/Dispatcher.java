@@ -3,9 +3,11 @@ package ssu.gamertaggo.utility;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import com.parse.*;
 
-import ssu.gamertaggo.viewcontroller.activity.*;
+import com.parse.ParseUser;
+
+import ssu.gamertaggo.viewcontroller.activity.MainActivity;
+import ssu.gamertaggo.viewcontroller.activity.SignUpOrLoginActivity;
 
 
 
@@ -16,6 +18,7 @@ import ssu.gamertaggo.viewcontroller.activity.*;
 
 public class Dispatcher extends Activity {
     Intent intent;
+    Intent serviceIntent;
 
     @Override
     public void onCreate(Bundle savedInstanceState){
@@ -24,10 +27,13 @@ public class Dispatcher extends Activity {
         if (ParseUser.getCurrentUser() != null) {
             // Start an intent for the logged in activity
             intent = (new Intent(this, MainActivity.class));
+
+
         } else {
             // Start and intent for the logged out activity
             intent = (new Intent(this, SignUpOrLoginActivity.class));
         }
+
         startActivity(intent);
         this.finish();
     }

@@ -27,4 +27,12 @@ dependencies {
     compile files('src/main/java/libs/Parse-1.13.0.jar')
     compile 'com.parse.bolts:bolts-android:1.+'
     compile 'com.parse:parse-android:1.+'
+    compile files('/Users/colinfranceschini/Downloads/GamerTagGo-master/libs/sinch-android-rtc-3.9.3.jar')
+    compile files('src/main/jniLibs/sinch-android-rtc-3.9.3.jar')
+    compile files('src/main/libs/aniways-V2.19.jar')
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.google.android.gms:play-services:6.5.87'
+
+
+
 }

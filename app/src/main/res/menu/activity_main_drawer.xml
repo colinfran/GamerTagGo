@@ -13,7 +13,7 @@
             android:title="Edit Profile" />
         <item
             android:id="@+id/nav_message"
-            android:title="Messages" />
+            android:title="Following" />
     </group>
 
     <item android:title="Options">

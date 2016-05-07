@@ -1,27 +1,18 @@
 package ssu.gamertaggo.viewcontroller.fragment;
 
-import android.widget.Toast;
-import android.widget.AdapterView;
-import android.widget.Adapter;
 import android.app.Fragment;
 import android.app.FragmentManager;
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.Spinner;
-import android.widget.TextView;
-
-import com.parse.ParseUser;
 
 import ssu.gamertaggo.R;
 import ssu.gamertaggo.listener.CustomOnItemSelectedListener;
-import ssu.gamertaggo.viewcontroller.activity.LoginActivity;
 
 public class MainMenuFragment extends Fragment {
 
@@ -54,7 +45,7 @@ public class MainMenuFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 FragmentManager location = getFragmentManager();
-                location.beginTransaction().replace(R.id.content_frame, new SearchFragment()).commit();
+                location.beginTransaction().replace(R.id.content_frame, new SearchLocationFragment()).commit();
             }
         });
 
@@ -63,7 +54,7 @@ public class MainMenuFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 FragmentManager location = getFragmentManager();
-                location.beginTransaction().replace(R.id.content_frame, new SearchFragment()).commit();
+                location.beginTransaction().replace(R.id.content_frame, new SearchGameFragment()).commit();
             }
         });
 
@@ -74,43 +65,43 @@ public class MainMenuFragment extends Fragment {
                 switch (position) {
                     case 1:
                         FragmentManager fm1 = getFragmentManager();
-                        fm1.beginTransaction().replace(R.id.content_frame, new SearchFragment()).commit();
+                        fm1.beginTransaction().replace(R.id.content_frame, new SearchGenreFragment()).commit();
                         break;
                     case 2:
                         FragmentManager fm2 = getFragmentManager();
-                        fm2.beginTransaction().replace(R.id.content_frame, new SearchFragment()).commit();
+                        fm2.beginTransaction().replace(R.id.content_frame, new SearchGenreFragment()).commit();
                         break;
                     case 3:
                         FragmentManager fm3 = getFragmentManager();
-                        fm3.beginTransaction().replace(R.id.content_frame, new SearchFragment()).commit();
+                        fm3.beginTransaction().replace(R.id.content_frame, new SearchGenreFragment()).commit();
                         break;
                     case 4:
                         FragmentManager fm4 = getFragmentManager();
-                        fm4.beginTransaction().replace(R.id.content_frame, new SearchFragment()).commit();
+                        fm4.beginTransaction().replace(R.id.content_frame, new SearchGenreFragment()).commit();
                         break;
                     case 5:
                         FragmentManager fm5 = getFragmentManager();
-                        fm5.beginTransaction().replace(R.id.content_frame, new SearchFragment()).commit();
+                        fm5.beginTransaction().replace(R.id.content_frame, new SearchGenreFragment()).commit();
                         break;
                     case 6:
                         FragmentManager fm6 = getFragmentManager();
-                        fm6.beginTransaction().replace(R.id.content_frame, new SearchFragment()).commit();
+                        fm6.beginTransaction().replace(R.id.content_frame, new SearchGenreFragment()).commit();
                         break;
                     case 7:
                         FragmentManager fm7 = getFragmentManager();
-                        fm7.beginTransaction().replace(R.id.content_frame, new SearchFragment()).commit();
+                        fm7.beginTransaction().replace(R.id.content_frame, new SearchGenreFragment()).commit();
                         break;
                     case 8:
                         FragmentManager fm8 = getFragmentManager();
-                        fm8.beginTransaction().replace(R.id.content_frame, new SearchFragment()).commit();
+                        fm8.beginTransaction().replace(R.id.content_frame, new SearchGenreFragment()).commit();
                         break;
                     case 9:
                         FragmentManager fm9 = getFragmentManager();
-                        fm9.beginTransaction().replace(R.id.content_frame, new SearchFragment()).commit();
+                        fm9.beginTransaction().replace(R.id.content_frame, new SearchGenreFragment()).commit();
                         break;
                     case 10:
                         FragmentManager fm10 = getFragmentManager();
-                        fm10.beginTransaction().replace(R.id.content_frame, new SearchFragment()).commit();
+                        fm10.beginTransaction().replace(R.id.content_frame, new SearchGenreFragment()).commit();
                         break;
                 }
             }
@@ -127,27 +118,27 @@ public class MainMenuFragment extends Fragment {
                 switch (position) {
                     case 1:
                         FragmentManager fm1 = getFragmentManager();
-                        fm1.beginTransaction().replace(R.id.content_frame, new SearchFragment()).commit();
+                        fm1.beginTransaction().replace(R.id.content_frame, new SearchConsoleFragment()).commit();
                         break;
                     case 2:
                         FragmentManager fm2 = getFragmentManager();
-                        fm2.beginTransaction().replace(R.id.content_frame, new SearchFragment()).commit();
+                        fm2.beginTransaction().replace(R.id.content_frame, new SearchConsoleFragment()).commit();
                         break;
                     case 3:
                         FragmentManager fm3 = getFragmentManager();
-                        fm3.beginTransaction().replace(R.id.content_frame, new SearchFragment()).commit();
+                        fm3.beginTransaction().replace(R.id.content_frame, new SearchConsoleFragment()).commit();
                         break;
                     case 4:
                         FragmentManager fm4 = getFragmentManager();
-                        fm4.beginTransaction().replace(R.id.content_frame, new SearchFragment()).commit();
+                        fm4.beginTransaction().replace(R.id.content_frame, new SearchConsoleFragment()).commit();
                         break;
                     case 5:
                         FragmentManager fm5 = getFragmentManager();
-                        fm5.beginTransaction().replace(R.id.content_frame, new SearchFragment()).commit();
+                        fm5.beginTransaction().replace(R.id.content_frame, new SearchConsoleFragment()).commit();
                         break;
                     case 6:
                         FragmentManager fm6 = getFragmentManager();
-                        fm6.beginTransaction().replace(R.id.content_frame, new SearchFragment()).commit();
+                        fm6.beginTransaction().replace(R.id.content_frame, new SearchConsoleFragment()).commit();
                         break;
                 }
             }

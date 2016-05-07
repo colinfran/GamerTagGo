@@ -1,19 +1,13 @@
 package ssu.gamertaggo.viewcontroller.fragment;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Fragment;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
-import com.parse.ParseClassName;
-import android.widget.Toast;
 import android.widget.Button;
-import ssu.gamertaggo.service.AppParseUser;
 
 import android.content.DialogInterface;
 import com.parse.*;
