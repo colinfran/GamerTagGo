@@ -24,7 +24,7 @@ public class SignUpOrLoginActivity extends Activity {
         TextView textView;
 
         // Log in button click handler
-        ((Button) findViewById(R.id.login)).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.login).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Starts an intent of the log in activity
                 startActivity(new Intent(SignUpOrLoginActivity.this, LoginActivity.class));
@@ -32,14 +32,14 @@ public class SignUpOrLoginActivity extends Activity {
         });
 
         // Sign up button click handler
-        ((Button) findViewById(R.id.signup)).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.signup).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Starts an intent for the sign up activity
                 startActivity(new Intent(SignUpOrLoginActivity.this, SignUpActivity.class));
             }
         });
 
-        ((TextView) findViewById(R.id.textView2)).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.textView2).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Starts an intent for the sign up activity
                 startActivity(new Intent(SignUpOrLoginActivity.this, AboutCreatorsActivity.class));

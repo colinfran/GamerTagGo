@@ -10,7 +10,7 @@ import android.widget.Toast;
 import com.parse.*;
 
 import ssu.gamertaggo.utility.Dispatcher;
-import ssu.gamertaggo.service.AppParseUser;
+import ssu.gamertaggo.adapter.AppParseUser;
 import ssu.gamertaggo.R;
 
 
@@ -107,6 +107,8 @@ public class SignUpActivity extends Activity {
                 user.setfirstName(firstnameView.getText().toString());
                 user.setlastName(lastnameView.getText().toString());
 
+                ParseRelation<ParseObject> relation = user.getRelation("Messages");
+
 
                 // Call the Parse signup method
                 user.signUpInBackground(new SignUpCallback() {
@@ -130,18 +132,10 @@ public class SignUpActivity extends Activity {
     }
 
     private boolean isEmpty(EditText etText) {
-        if (etText.getText().toString().trim().length() > 0) {
-            return false;
-        } else {
-            return true;
-        }
+        return etText.getText().toString().trim().length() <= 0;
     }
 
     private boolean isMatching(EditText etText1, EditText etText2) {
-        if (etText1.getText().toString().equals(etText2.getText().toString())) {
-            return true;
-        } else {
-            return false;
-        }
+        return etText1.getText().toString().equals(etText2.getText().toString());
     }
 }

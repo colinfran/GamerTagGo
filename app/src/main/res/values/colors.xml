@@ -5,6 +5,4 @@
     <color name="colorAccent">#ffffff</color>
     <color name="background">#424242</color>
 
-    <drawable name="pressed_gray">#0c000000</drawable>
-    <drawable name="selected_gray">#2c000000</drawable>
 </resources>

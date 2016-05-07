@@ -6,13 +6,11 @@
     <string name="prompt_first_name">First Name</string>
     <string name="prompt_last_name">Last Name</string>
     <string name="prompt_password">Password</string>
-    <string name="emailHint">Email</string>
     <string name="prompt_username">Username</string>
     <string name="desired_username">Desired Username</string>
     <string name="desired_password">Desired Password</string>
     <string name="prompt_password_again">Password Again</string>
     <string name="action_sign_up_short">Sign up</string>
-    <string name="submit">Submit</string>
     <string name="error_intro">"Please "</string>
     <string name="error_blank_email">enter your email address</string>
     <string name="error_blank_firstname">enter your first name</string>
@@ -45,13 +43,6 @@
     <string name="HoldUser">To Message a user, press and hold there name</string>
     <string name="message">Message User</string>
 
-
-    <string name="MainMenu">Main Menu</string>
-    <string name="ViewProfile">View Profile</string>
-    <string name="EditProfile">Edit Profile</string>
-    <string name="Homies">Homies</string>
-    <string name="Settings">Settings</string>
-    <string name="LogOut">Log Out</string>
     <string name="about_creators1">About the Creators</string>
     <string name="about_creators2">This app was created by Sonoma State
         students Colin Franceschini, Tyler Coonce, and David Wentworth.
