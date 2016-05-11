@@ -1,0 +1,111 @@
+<resources>
+    <string name="app_name">GamerTagGo</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_first_name">First Name</string>
+    <string name="prompt_last_name">Last Name</string>
+    <string name="prompt_password">Password</string>
+    <string name="prompt_username">Username</string>
+    <string name="desired_username">Desired Username</string>
+    <string name="desired_password">Desired Password</string>
+    <string name="prompt_password_again">Password Again</string>
+    <string name="action_sign_up_short">Sign up</string>
+    <string name="error_intro">"Please "</string>
+    <string name="error_blank_email">enter your email address</string>
+    <string name="error_blank_firstname">enter your first name</string>
+    <string name="error_blank_lastname">enter your last name</string>
+    <string name="resetpassword">Reset Password</string>
+    <string name="submit">Submit</string>
+
+    <string name="prompt_fav_game1">Favorite Game</string>
+    <string name="prompt_fav_genre1">Favorite Genre</string>
+    <string name="prompt_console">Console</string>
+
+    <string name="error_blank_username">enter a username</string>
+    <string name="error_blank_password">enter a password</string>
+    <string name="error_mismatched_passwords">enter the same password twice</string>
+    <string name="error_join">", and "</string>
+    <string name="error_end">.</string>
+
+    <string name="error_blank_favgame">enter your favorite game</string>
+    <string name="error_blank_favgenre">select your favorite genres</string>
+    <string name="error_blank_console">select your consoles</string>
+
+    <string name="log_in">Log in</string>
+    <string name="sign_up">Sign up</string>
+    <string name="skip">Skip</string>
+
+    <string name="save">Save</string>
+
+    <string name = "appID">wrYHgB3u7Lp0iTyhKFz3y9duaYISRhx64HeP7keb</string>
+    <string name = "clientID">JLcpeLrkbW01nXUfmC8Hx6ESqNVmpryKHDKlipym</string>
+    <string name = "serverID">https://parseapi.back4app.com</string>
+
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="fav_game">Favorite Game</string>
+    <string name="fav_genre">Favorite Genre</string>
+    <string name="console_">Console</string>
+
+    <string name="HoldUser">To Message a user, press and hold there name</string>
+    <string name="message">Message User</string>
+
+    <string name="about_creators1">About the Creators</string>
+    <string name="about_creators2">This app was created by Sonoma State
+        students Colin Franceschini, Tyler Coonce, and David Wentworth.
+        Looking for a way to connect with other video gamers, the concept of this app was to build
+        a social network that bridges that gap between lonely and bored video gamers.</string>
+
+    <string name="game_genres_title">Search By Game Genre</string>
+
+    <string-array name="game_genres">
+        <item>Game Genres</item>
+        <item>Action</item>
+        <item>Adventure</item>
+        <item>Arcade</item>
+        <item>Combat</item>
+        <item>Defense</item>
+        <item>Fist Person Shooter</item>
+        <item>Puzzle</item>
+        <item>Sports</item>
+        <item>Strategy</item>
+        <item>Third Person Shooter</item>
+    </string-array>
+
+    <string-array name="consolelist">
+        <item>Favorite Consoles</item>
+        <item>PS3</item>
+        <item>PS4</item>
+        <item>XBox 360</item>
+        <item>XBox ONE</item>
+        <item>Steam</item>
+    </string-array>
+
+    <string-array name="favgames">
+        <item>Favorite Games</item>
+        <item>Call of Duty: Black Ops</item>
+        <item>Call of Duty: Black Ops 2</item>
+        <item>GTA 5</item>
+        <item>Fifa</item>
+        <item>Battlefield 4</item>
+    </string-array>
+
+    <string-array name="userexample">
+        <item>Billy Bob</item>
+        <item>Darth Vader</item>
+        <item>Bob Saget</item>
+        <item>Colin Franceschini</item>
+        <item>Tyler Coonce</item>
+        <item>David Wentworth</item>
+    </string-array>
+
+</resources>
+
+
+
+
+
+
