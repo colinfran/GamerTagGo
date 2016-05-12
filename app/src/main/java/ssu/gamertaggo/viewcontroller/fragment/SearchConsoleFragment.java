@@ -14,15 +14,13 @@ import android.widget.ListView;
 
 import ssu.gamertaggo.R;
 
-/**
- * Created by colinfranceschini on 5/6/16.
- */
+
 public class SearchConsoleFragment extends Fragment {
     ListView lv;
     Adapter AdapterContextMenuInfo;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_genre_search, container, false);
+        View v = inflater.inflate(R.layout.fragment_console_search, container, false);
 
         lv = (ListView) v.findViewById(R.id.listView);
         registerForContextMenu(lv);

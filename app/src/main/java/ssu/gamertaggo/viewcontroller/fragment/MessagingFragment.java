@@ -13,6 +13,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.parse.FindCallback;
+import com.parse.ParseACL;
 import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
@@ -24,7 +25,7 @@ import java.util.List;
 
 import ssu.gamertaggo.R;
 import ssu.gamertaggo.adapter.ChatListAdapter;
-import ssu.gamertaggo.adapter.Message;
+import ssu.gamertaggo.parse_adapter.AppParseMessage;
 
 public class MessagingFragment extends Fragment {
 
@@ -37,7 +38,7 @@ public class MessagingFragment extends Fragment {
     EditText etMessage;
     Button btSend;
     ListView lvChat;
-    ArrayList<Message> mMessages;
+    ArrayList<AppParseMessage> mMessages;
     ChatListAdapter mAdapter;
     // Keep track of initial load to scroll to the bottom of the ListView
     boolean mFirstLoad;
@@ -72,7 +73,17 @@ public class MessagingFragment extends Fragment {
                     Toast.makeText(getActivity().getApplicationContext(), "Please enter a message", Toast.LENGTH_LONG).show();
                     return;
                 }
+
+                ParseACL acl = new ParseACL();
+                acl.setWriteAccess(ParseUser.getCurrentUser(), true);
+                acl.setWriteAccess(userTo, true);
+                acl.setReadAccess(ParseUser.getCurrentUser(), true);
+                acl.setReadAccess(userTo, true);
+
+
                 ParseObject message = ParseObject.create("Message");
+                message.setACL(acl);
+
                 message.put(BODY_KEY, data);
 
                 message.put(USER_ID_KEY, userId);
@@ -95,15 +106,13 @@ public class MessagingFragment extends Fragment {
     }
     void refreshMessages() {
         // Construct query to execute
-        ParseQuery<Message> query = ParseQuery.getQuery(Message.class);
+        ParseQuery<AppParseMessage> query = ParseQuery.getQuery(AppParseMessage.class);
         // Configure limit and sort order
         query.setLimit(MAX_CHAT_MESSAGES_TO_SHOW);
         query.orderByAscending("createdAt");
 
-        // Execute query to fetch all messages from Parse asynchronously
-        // This is equivalent to a SELECT query with SQL
-        query.findInBackground(new FindCallback<Message>() {
-            public void done(List<Message> messages, ParseException e) {
+        query.findInBackground(new FindCallback<AppParseMessage>() {
+            public void done(List<AppParseMessage> messages, ParseException e) {
                 if (e == null) {
                     mMessages.clear();
                     mMessages.addAll(messages);

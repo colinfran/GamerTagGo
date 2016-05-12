@@ -16,11 +16,12 @@ import java.security.MessageDigest;
 import java.util.List;
 
 import ssu.gamertaggo.R;
+import ssu.gamertaggo.parse_adapter.AppParseMessage;
 
-public class ChatListAdapter extends ArrayAdapter<Message> {
+public class ChatListAdapter extends ArrayAdapter<AppParseMessage> {
     private String mUserId;
 
-    public ChatListAdapter(Context context, String userId, List<Message> messages) {
+    public ChatListAdapter(Context context, String userId, List<AppParseMessage> messages) {
         super(context, 0, messages);
         this.mUserId = userId;
     }
@@ -36,7 +37,7 @@ public class ChatListAdapter extends ArrayAdapter<Message> {
             holder.body = (TextView)convertView.findViewById(R.id.tvBody);
             convertView.setTag(holder);
         }
-        final Message message = getItem(position);
+        final AppParseMessage message = getItem(position);
         final ViewHolder holder = (ViewHolder)convertView.getTag();
         final boolean isMe = message.getUserId().equals(mUserId);
         // Show-hide image based on the logged-in user.
