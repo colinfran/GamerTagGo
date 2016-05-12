@@ -1,6 +1,5 @@
 package ssu.gamertaggo.viewcontroller.fragment;
 
-
 import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,6 +10,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.parse.FindCallback;
+import com.parse.GetCallback;
 import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
@@ -21,7 +21,10 @@ import java.util.List;
 
 import ssu.gamertaggo.R;
 
-public class ViewProfileFragment extends Fragment {
+/**
+ * Created by colinfranceschini on 5/11/16.
+ */
+public class SearchUserProfileFragment extends Fragment {
 
     private TextView usernameTextView;
     private TextView firstnameTextView;
@@ -29,21 +32,55 @@ public class ViewProfileFragment extends Fragment {
     private TextView emailTextView;
 
 
+
+
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_view_profile, container, false);
+        View v = inflater.inflate(R.layout.fragment_view_user_profile, container, false);
 
         usernameTextView = (TextView) v.findViewById(R.id.textViewUsername);
         firstnameTextView = (TextView) v.findViewById(R.id.textViewFirst);
         lastnameTextView = (TextView) v.findViewById(R.id.textViewLast);
         emailTextView = (TextView) v.findViewById(R.id.textViewEmail);
-        final Spinner games = (Spinner) v.findViewById(R.id.spinner);
-        final Spinner genres = (Spinner) v.findViewById(R.id.spinner3);
-        final Spinner consoles = (Spinner) v.findViewById(R.id.spinner4);
 
 
+        return v;
 
-        ParseQuery<ParseObject> query = new ParseQuery<ParseObject>("Game");
-        query.whereEqualTo("userID", ParseUser.getCurrentUser());
+
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        // Set up the profile page based on the current user.
+        List<ParseUser> users = null;
+        final Spinner games = (Spinner) getView().findViewById(R.id.spinnerUser1);
+        final Spinner genres = (Spinner)getView().findViewById(R.id.spinnerUser2);
+        final Spinner consoles = (Spinner) getView().findViewById(R.id.spinnerUser3);
+
+
+        Bundle bundle = getArguments();
+        String user_id = bundle.getString("UserProfile");
+
+
+        ParseQuery<ParseObject> query4 = ParseQuery.getQuery("_User");
+        query4.getInBackground(user_id, new GetCallback<ParseObject>() {
+            public void done(ParseObject object, ParseException e) {
+                if (e == null) {
+                    String userName = object.getString("username");
+                    usernameTextView.setText(userName);
+                    String first_name = object.getString("first_name");
+                    firstnameTextView.setText(first_name);
+                    String email = object.getString("email");
+                    emailTextView.setText(email);
+
+                } else {
+                    // something went wrong
+                }
+            }
+        });
+
+        ParseQuery<ParseObject> query = ParseQuery.getQuery("Game");
+        query.whereEqualTo("userID", user_id);
         query.findInBackground(new FindCallback<ParseObject>() {
             @Override
             public void done(List<ParseObject> list, ParseException e) {
@@ -61,8 +98,8 @@ public class ViewProfileFragment extends Fragment {
             }
         });
 
-        ParseQuery<ParseObject> query2 = new ParseQuery<ParseObject>("Genre");
-        query2.whereEqualTo("userID", ParseUser.getCurrentUser());
+        ParseQuery<ParseObject> query2 = ParseQuery.getQuery("Genre");
+        query2.whereEqualTo("userID", user_id);
         query2.findInBackground(new FindCallback<ParseObject>() {
             @Override
             public void done(List<ParseObject> list, ParseException e) {
@@ -80,8 +117,8 @@ public class ViewProfileFragment extends Fragment {
             }
         });
 
-        ParseQuery<ParseObject> query3 = new ParseQuery<ParseObject>("Console");
-        query3.whereEqualTo("userID", ParseUser.getCurrentUser());
+        ParseQuery<ParseObject> query3 = ParseQuery.getQuery("Console");
+        query3.whereEqualTo("userID", user_id);
         query3.findInBackground(new FindCallback<ParseObject>() {
             @Override
             public void done(List<ParseObject> list, ParseException e) {
@@ -99,44 +136,5 @@ public class ViewProfileFragment extends Fragment {
             }
         });
 
-
-        return v;
-
-    }
-
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        // Set up the profile page based on the current user.
-        ParseUser user = ParseUser.getCurrentUser();
-        showProfile(user);
-
-
-    }
-
-    /**
-     * Shows the profile of the given user.
-     *
-     * @param user
-     */
-    public void showProfile(ParseUser user) {
-        if (user != null) {
-            String userName = user.getString("username");
-            if (userName != null) {
-                usernameTextView.setText(userName);}
-            String firstName = user.getString("first_name");
-            if (firstName != null) {
-                firstnameTextView.setText(firstName);}
-            String lastName = user.getString("last_name");
-            if (lastName != null) {
-                lastnameTextView.setText(lastName);}
-            String userEmail = user.getString("email");
-            if (userEmail != null) {
-                emailTextView.setText(userEmail);}
-        }
     }
 }
-
-
-

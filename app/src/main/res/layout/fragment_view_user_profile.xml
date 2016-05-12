@@ -33,8 +33,7 @@
                     android:id="@+id/textViewUsername"
                     android:textColor="#FFFFFF"
                     android:layout_gravity="center"
-                    android:textSize="40dp"
-                    android:text="username" />
+                    android:textSize="40dp" />
 
             </LinearLayout>
 
@@ -49,20 +48,9 @@
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:id="@+id/textViewFirst"
-                    android:text="First"
                     android:textColor="#FFFFFF"
                     android:layout_gravity="center"
                     android:layout_marginRight="4dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:text="Last"
-                    android:id="@+id/textViewLast"
-                    android:textColor="#FFFFFF"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="4dp" />
 
             </LinearLayout>
 
@@ -77,8 +65,7 @@
                     android:textStyle="bold"
                     android:id="@+id/textViewEmail"
                     android:textColor="#FFFFFF"
-                    android:layout_gravity="center"
-                    android:text="email" />
+                    android:layout_gravity="center"/>
             </LinearLayout>
 
             <LinearLayout
@@ -99,7 +86,7 @@
                 <Spinner
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/spinner"
+                    android:id="@+id/spinnerUser1"
                     android:popupBackground="@color/background"/>
 
             </LinearLayout>
@@ -122,7 +109,7 @@
                 <Spinner
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/spinner3"
+                    android:id="@+id/spinnerUser2"
                     android:popupBackground="@color/background"/>
 
             </LinearLayout>
@@ -146,7 +133,7 @@
                 <Spinner
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/spinner4"
+                    android:id="@+id/spinnerUser3"
                     android:popupBackground="@color/background"/>
 
             </LinearLayout>

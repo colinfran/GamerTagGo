@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/LoginFormContainer"
+    android:orientation="vertical"
+    android:background="@color/background"
+    android:layout_height="match_parent"
+    android:id="@+id/linearLayout">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/favGame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/prompt_fav_game1"
+                android:maxLines="2"
+                android:singleLine="true"
+                android:textColorHint="#ffffff"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/injectionLayout"
+                android:orientation="vertical">
+
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+"
+                    android:id="@+id/add"
+                    android:layout_gravity="right" />
+                <EditText
+                    android:id="@+id/textin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@id/add"/>
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/favGenre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/prompt_fav_genre1"
+                android:maxLines="2"
+                android:singleLine="true"
+                android:textColorHint="#ffffff"/>
+
+            <CheckBox
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Action Adventure"
+                android:id="@+id/action"
+                android:checked="false"
+                android:textColorHint="#ffffff" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shooter"
+                android:id="@+id/shoot"
+                android:checked="false"
+                android:textColorHint="#ffffff" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Strategy"
+                android:id="@+id/strat"
+                android:checked="false"
+                android:textColorHint="#ffffff" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RPG"
+                android:id="@+id/rpg"
+                android:checked="false"
+                android:textColorHint="#ffffff" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fighting"
+                android:id="@+id/fight"
+                android:checked="false"
+                android:textColorHint="#ffffff" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sports"
+                android:id="@+id/sport"
+                android:checked="false"
+                android:textColorHint="#ffffff" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MMO"
+                android:id="@+id/mmo"
+                android:checked="false"
+                android:textColorHint="#ffffff" />
+
+            <TextView
+                android:id="@+id/console"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/prompt_console"
+                android:maxLines="2"
+                android:singleLine="true"
+                android:textColorHint="#ffffff"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PC"
+                android:id="@+id/pc" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Playstation 4"
+                android:id="@+id/ps4" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Xbox One"
+                android:id="@+id/xbone" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wii U"
+                android:id="@+id/wii" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Other"
+                android:id="@+id/other" />
+
+            <Button
+                android:id="@+id/sign_up_action_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="16dp"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
+                android:text="@string/sign_up" />
+
+            <Button
+                android:id="@+id/skip_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="16dp"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
+                android:text="@string/skip" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
