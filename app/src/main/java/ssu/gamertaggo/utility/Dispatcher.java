@@ -14,11 +14,10 @@ import ssu.gamertaggo.viewcontroller.activity.SignUpOrLoginActivity;
 /**
  * Activity which starts an intent for either the logged in (MainActivity) or logged out
  * (SignUpOrLoginActivity) activity.
- */
+ **/
 
 public class Dispatcher extends Activity {
     Intent intent;
-    Intent serviceIntent;
 
     @Override
     public void onCreate(Bundle savedInstanceState){

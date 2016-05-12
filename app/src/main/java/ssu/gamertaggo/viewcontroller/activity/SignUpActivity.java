@@ -10,7 +10,7 @@ import android.widget.Toast;
 import com.parse.*;
 
 import ssu.gamertaggo.utility.Dispatcher;
-import ssu.gamertaggo.adapter.AppParseUser;
+import ssu.gamertaggo.parse_adapter.AppParseUser;
 import ssu.gamertaggo.R;
 
 
@@ -31,10 +31,8 @@ public class SignUpActivity extends Activity {
         setContentView(R.layout.activity_signup);
 
         // Set up the signup form.
-
         firstnameView = (EditText) findViewById(R.id.firstname);
         lastnameView = (EditText) findViewById(R.id.lastname);
-
         emailView = (EditText) findViewById(R.id.email);
         usernameView = (EditText) findViewById(R.id.username);
         passwordView = (EditText) findViewById(R.id.password);
@@ -108,7 +106,6 @@ public class SignUpActivity extends Activity {
                 user.setlastName(lastnameView.getText().toString());
 
                 ParseRelation<ParseObject> relation = user.getRelation("Messages");
-
 
                 // Call the Parse signup method
                 user.signUpInBackground(new SignUpCallback() {

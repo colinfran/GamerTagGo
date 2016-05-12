@@ -18,9 +18,7 @@ import java.util.List;
 
 import ssu.gamertaggo.R;
 
-/**
- * Created by colinfranceschini on 5/6/16.
- */
+
 public class SearchLocationFragment extends Fragment {
 
     ArrayAdapter namesArrayAdapter;

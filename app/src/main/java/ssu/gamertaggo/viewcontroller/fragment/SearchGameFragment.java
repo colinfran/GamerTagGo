@@ -14,9 +14,7 @@ import android.widget.ListView;
 
 import ssu.gamertaggo.R;
 
-/**
- * Created by colinfranceschini on 5/6/16.
- */
+
 public class SearchGameFragment extends Fragment {
     ListView lv;
     Adapter AdapterContextMenuInfo;

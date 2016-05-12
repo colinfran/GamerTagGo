@@ -5,18 +5,17 @@ import android.app.Application;
 import com.parse.Parse;
 import com.parse.ParseObject;
 
-import ssu.gamertaggo.adapter.Message;
+import ssu.gamertaggo.parse_adapter.AppParseMessage;
 
 
 /** THIS ACTIVITY FILE CONTAINS CODE THAT GETS THE PARSE SERVER ID, PARSE APP ID, AND
-    CLIENT KEY
- */
+    CLIENT KEY **/
 
 public class ParseService extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        ParseObject.registerSubclass(Message.class);
+        ParseObject.registerSubclass(AppParseMessage.class);
         Parse.enableLocalDatastore(this);
         Parse.initialize(new Parse.Configuration.Builder(this)
                 .applicationId(getString(ssu.gamertaggo.R.string.appID))
