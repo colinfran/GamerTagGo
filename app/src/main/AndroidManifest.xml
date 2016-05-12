@@ -50,6 +50,8 @@
 
         <activity android:name=".viewcontroller.activity.SignUpActivity"
             android:theme="@style/AppTheme"/>
+        <activity android:name=".viewcontroller.activity.SignUpActivity2"
+            android:theme="@style/AppTheme"/>
         <activity android:name=".viewcontroller.activity.SignUpOrLoginActivity"
             android:theme="@style/AppTheme"/>
         <activity android:name=".viewcontroller.activity.AboutCreatorsActivity"/>
